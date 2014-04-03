@@ -3,8 +3,10 @@
  * Script to display query results in associative array search example.
  * DANGEROUS: Does not sanitise user input.
  */
-include 'Smarty.class.php';
+include '../../Smarty/libs/Smarty.class.php';
 include "includes/defs.php";
+
+date_default_timezone_set('UTC');
 
 /* Get form data. */
 $query = $_GET['query'];

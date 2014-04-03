@@ -1,20 +1,20 @@
 <?php
 /* Database access functions. */
 
-// Read HOST, USER, PASSWORD, DATABASE from file
-// include your database credentials file her
-
-/* Show MySQL error. */
-function show_error() {
-  die("Error ". mysql_errno() . " : " . mysql_error());
+/* Show SQLite error. */
+function show_error($e) {
+  die("Error: " . $e->getMessage());
 }
 
 /* Open connection and select database. */
-function mysql_open() {
-  $connection = @ mysql_connect(HOST, USER, PASSWORD)
-      or die("Could not connect");
-  mysql_select_db(DATABASE, $connection)
-      or show_error();
-  return $connection;
-}
+function db_open()
+{
+	try {
+		$db = new PDO('sqlite:db/database.sqlite');
+		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	} catch (PDOException $e) {
+		show_error($e);
+	}
+	return $db;
+} 
 ?>

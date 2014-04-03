@@ -4,7 +4,7 @@
 <head>
   <title>Associative array search example</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="../wp.css">
+  <link rel="stylesheet" type="text/css" href="styles/wp.css">
 </head>
 
 <body>
