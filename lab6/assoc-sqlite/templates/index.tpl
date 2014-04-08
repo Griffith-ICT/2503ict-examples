@@ -21,7 +21,7 @@
         <td><input type="text" name="query"></td></tr>
     <tr><td colspan=2><input type="submit" value="Search">
                       <input type="reset" value="Reset"></td></tr>
-  <table>
+  </table>
   </form>
   </section>
 
