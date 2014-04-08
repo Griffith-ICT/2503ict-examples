@@ -18,7 +18,7 @@ if (empty($summary)) {
 }
 
 # Perform update with data
-update_item($id,$summary,details);
+update_item($id,$summary,$details);
 
 header("Location: item_detail.php?id=$id"); 
 exit;
