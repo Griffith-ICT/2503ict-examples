@@ -29,5 +29,5 @@ Associative array search results page
 </table>
 @endif
 
-<p><a href="{{ URL::to('/') }}">New search</a></p>
+<p><a href="{{ secure_url('/') }}">New search</a></p>
 @stop
